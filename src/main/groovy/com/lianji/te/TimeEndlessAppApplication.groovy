@@ -1,4 +1,4 @@
-package com.lianji.timeendlessapp
+package com.lianji.te
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration

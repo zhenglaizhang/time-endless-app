@@ -1,4 +1,4 @@
-package com.lianji.timeendlessapp
+package com.lianji.te
 
 import org.junit.Test
 import org.junit.runner.RunWith

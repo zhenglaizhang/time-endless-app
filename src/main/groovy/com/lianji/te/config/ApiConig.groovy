@@ -1,4 +1,4 @@
-package com.lianji.timeendlessapp.config
+package com.lianji.te.config
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.ObjectWriter

@@ -1,4 +1,4 @@
-package com.lianji.timeendlessapp
+package com.lianji.te
 
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.boot.web.support.SpringBootServletInitializer

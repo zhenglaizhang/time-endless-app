@@ -1,14 +1,12 @@
 package com.lianji.te.rest
 
 import com.lianji.te.model.response.Photo
+import com.lianji.te.rest.request.PhotoRequest
 import org.springframework.format.annotation.DateTimeFormat
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 import java.time.LocalDate
 
@@ -28,4 +26,27 @@ class PhotoResource {
         new ResponseEntity<>(new Photo(), HttpStatus.OK)
     }
 
+    @RequestMapping(path = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    ResponseEntity<Photo> createPhoto(
+            @RequestBody
+                    PhotoRequest photoRequest
+    ) {
+        new ResponseEntity(new Photo(), HttpStatus.CREATED)
+    }
+
+    @RequestMapping(path = "", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    ResponseEntity<Photo> updatePhoto(
+            @RequestBody
+                    PhotoRequest photoRequest
+    ) {
+        new ResponseEntity(new Photo(), HttpStatus.OK)
+    }
+
+    @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    ResponseEntity<Photo> deletePhoto(
+            @PathVariable
+                long id
+    ) {
+        new ResponseEntity(HttpStatus.NO_CONTENT)
+    }
 }

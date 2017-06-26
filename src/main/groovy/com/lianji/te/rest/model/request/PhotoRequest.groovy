@@ -1,4 +1,4 @@
-package com.lianji.te.rest.request
+package com.lianji.te.rest.model.request
 
 import org.springframework.format.annotation.DateTimeFormat
 

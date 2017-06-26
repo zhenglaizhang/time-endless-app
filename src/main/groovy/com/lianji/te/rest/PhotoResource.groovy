@@ -1,7 +1,7 @@
 package com.lianji.te.rest
 
 import com.lianji.te.model.response.Photo
-import com.lianji.te.rest.request.PhotoRequest
+import com.lianji.te.rest.model.request.PhotoRequest
 import org.springframework.format.annotation.DateTimeFormat
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
@@ -45,7 +45,7 @@ class PhotoResource {
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     ResponseEntity<Photo> deletePhoto(
             @PathVariable
-                long id
+                    long id
     ) {
         new ResponseEntity(HttpStatus.NO_CONTENT)
     }

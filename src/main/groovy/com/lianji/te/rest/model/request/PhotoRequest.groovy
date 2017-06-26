@@ -1,14 +1,13 @@
 package com.lianji.te.rest.model.request
 
-import org.springframework.format.annotation.DateTimeFormat
+import groovy.transform.Canonical
+import org.springframework.web.multipart.MultipartFile
 
-import java.time.LocalDate
-
+@Canonical
 class PhotoRequest {
-    String name
+    String name, description
+    MultipartFile file
 
-    String description
-
-    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
-    LocalDate taken_time
+//    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+//    LocalDate taken_time
 }

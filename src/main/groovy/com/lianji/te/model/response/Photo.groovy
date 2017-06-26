@@ -1,6 +1,7 @@
 package com.lianji.te.model.response
 
 import com.lianji.te.model.Links
+import groovy.transform.Canonical
 import org.hibernate.annotations.Cache
 import org.hibernate.annotations.CacheConcurrencyStrategy
 
@@ -11,6 +12,7 @@ import java.time.LocalDate
 //@Entity
 //@Table(name = "photos")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+@Canonical
 class Photo implements Serializable {
     static final long serialVersionUID = 1L
     @Size(min = 5)

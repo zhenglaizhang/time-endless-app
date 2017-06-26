@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.ComponentScan
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = ["com.lianji.te"])
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan("com.lianji.te")
 class TimeEndlessAppApplication {
 
     static void main(String[] args) {
